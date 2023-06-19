@@ -1,11 +1,13 @@
 <template>
-    <div class="my_card-container">
+    <div class="my_cards-container">
         <!-- <h2>Cards Container</h2> -->
         <div class="my_card-counter">
-            <h4>Found {{ store.cardList.length }}</h4>
+            <!-- <h4>Found {{ store.cardList.length }}</h4> -->
         </div>
-        <CardElement v-for="cards in store.cardList">
-        </CardElement>
+        <div class="card-row d-flex justify-content-between flex-wrap">
+            <CardElement v-for="card in store.cardList" :cardName="card.name" :cardType="card.type">
+            </CardElement>
+        </div>
     </div>
 </template>
 
@@ -35,7 +37,7 @@ export default {
 @use '../styles/partials/_variables.scss';
 @use '../styles/partials/_mixins.scss';
 
-div.my_card-container {
+div.my_cards-container {
     background-color: white;
     padding: 50px;
 }
@@ -46,5 +48,9 @@ div.my_card-counter {
     padding: 20px;
     font-size: 1.2rem;
     font-weight: 600;
+}
+
+div.card-row {
+    margin-bottom: 30px;
 }
 </style> 

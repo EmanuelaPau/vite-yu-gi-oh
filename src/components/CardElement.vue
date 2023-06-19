@@ -1,12 +1,10 @@
 <template>
-    <div class="my-column d-flex justify-content-between">
-        <div class="my_card-container">
-            <!-- <h3>CardElement</h3> -->
-            <img src="../assets/dark-magician.jpg" alt="">
-            <div class="card-infos-container">
-                <h1>Very very long Name</h1>
-                <h2>Card Type</h2>
-            </div>
+    <div class="my_card-container">
+        <!-- <h3>CardElement</h3> -->
+        <img src="../assets/dark-magician.jpg" alt="">
+        <div class="card-infos-container">
+            <h1>{{ cardName }}</h1>
+            <h2>{{ cardType }}</h2>
         </div>
     </div>
 </template>
@@ -22,10 +20,15 @@ export default {
     },
     data() {
         return {
+            store,
         }
     },
     methods() {
     },
+    props: {
+        cardName: String,
+        cardType: String,
+    }
 }		
 </script>
 <style scoped lang="scss">
@@ -34,15 +37,13 @@ export default {
 
 img {
     width: 100%;
-
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
 }
 
 div.my_card-container {
-    background-color: #d48f38;
     width: calc(100% / 4 - 20px);
     text-align: center;
-    height: 500px;
+    // height: 500px;
 
 
     h1 {
@@ -59,7 +60,15 @@ div.my_card-container {
         font-size: 1.3rem;
         font-weight: 300;
 
+
+    }
+
+    div.card-infos-container {
+        padding: 20px 0;
+        background-color: #d48f38;
+        height: 200px;
         margin-bottom: 20px;
+
     }
 }
 </style> 
