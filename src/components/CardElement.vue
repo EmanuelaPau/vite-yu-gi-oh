@@ -42,7 +42,7 @@ img {
 }
 
 div.my_card-container {
-    width: calc(100% / 4 - 20px);
+    width: calc(100% / 5 - 20px);
     text-align: center;
     // height: 500px;
 
@@ -67,7 +67,7 @@ div.my_card-container {
     div.card-infos-container {
         padding: 20px 0;
         background-color: #d48f38;
-        height: 200px;
+        height: 150px;
         margin-bottom: 20px;
 
     }

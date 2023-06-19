@@ -23,16 +23,19 @@
 
 <script>
 import CardContainer from './CardContainer.vue'
+import { store } from '../store.js';
 
 export default {
     name: 'AppMain',
 
     components: {
         CardContainer,
+        store,
     },
 
     data() {
         return {
+            store,
         }
     },
     methods() {

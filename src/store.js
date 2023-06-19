@@ -2,8 +2,8 @@ import { reactive } from 'vue';
 
 const store = reactive({
     searchText: "",
-    loading: true,
-    cardsList: [],
+    isLoading: true,
+    cardList: [],
 });
 
 export { store };

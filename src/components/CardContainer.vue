@@ -1,9 +1,11 @@
 <template>
     <div class="my_cards-container">
-        <!-- <h2>Cards Container</h2> -->
+
         <div class="my_card-counter">
-            <!-- <h4>Found {{ store.cardList.length }}</h4> -->
+            <h2>Found 20 cards</h2>
         </div>
+        <AppLoader v-if="store.cardList.length === 0" />
+
         <div class="card-row d-flex justify-content-between flex-wrap">
             <CardElement v-for="card in store.cardList" :cardName="card.name" :cardType="card.type"
                 :cardImage="card.card_images[0].image_url">
@@ -14,6 +16,7 @@
 
 <script>
 import CardElement from './CardElement.vue';
+import AppLoader from './AppLoader.vue'
 import { store } from '../store.js';
 
 
@@ -23,6 +26,7 @@ export default {
     components: {
         CardElement,
         store,
+        AppLoader,
     },
 
     data() {
