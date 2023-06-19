@@ -1,6 +1,9 @@
 import { reactive } from 'vue';
 
-export const store = reactive({
-    searchText: "ciao",
+const store = reactive({
+    searchText: "",
     loading: true,
+    cardsList: [],
 });
+
+export { store };

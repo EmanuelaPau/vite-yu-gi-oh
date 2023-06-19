@@ -2,7 +2,7 @@
     <div class="my_card-container">
         <!-- <h2>Cards Container</h2> -->
         <div class="my_card-counter">
-            Found 39 cards
+            Found {{ }}
             <h1> {{ store.searchText }}</h1>
         </div>
         <CardElement />
