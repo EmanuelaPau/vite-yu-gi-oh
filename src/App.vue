@@ -9,6 +9,7 @@
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue'
 
+
 export default {
   name: 'App',
   components: {
@@ -19,5 +20,7 @@ export default {
 </script>
 
 <style lang="scss">
-// @import './styles/general/scss'
+@import './styles/general.scss';
+// Import all of Bootstrap's CSS
+@import "../node_modules/bootstrap/scss/bootstrap";
 </style>
