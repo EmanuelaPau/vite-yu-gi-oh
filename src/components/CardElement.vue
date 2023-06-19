@@ -34,10 +34,6 @@ img {
     margin-bottom: 20px;
 }
 
-div.my-column {
-    // gap: 15px;
-}
-
 div.my_card-container {
     background-color: #d48f38;
     width: calc(100% / 4 - 20px);
