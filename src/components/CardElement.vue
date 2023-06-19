@@ -1,7 +1,7 @@
 <template>
     <div class="my_card-container">
         <!-- <h3>CardElement</h3> -->
-        <img src="../assets/dark-magician.jpg" alt="">
+        <img :src="cardImage" alt="">
         <div class="card-infos-container">
             <h1>{{ cardName }}</h1>
             <h2>{{ cardType }}</h2>
@@ -28,6 +28,7 @@ export default {
     props: {
         cardName: String,
         cardType: String,
+        cardImage: String,
     }
 }		
 </script>

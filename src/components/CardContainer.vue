@@ -5,7 +5,8 @@
             <!-- <h4>Found {{ store.cardList.length }}</h4> -->
         </div>
         <div class="card-row d-flex justify-content-between flex-wrap">
-            <CardElement v-for="card in store.cardList" :cardName="card.name" :cardType="card.type">
+            <CardElement v-for="card in store.cardList" :cardName="card.name" :cardType="card.type"
+                :cardImage="card.card_images[0].image_url">
             </CardElement>
         </div>
     </div>
