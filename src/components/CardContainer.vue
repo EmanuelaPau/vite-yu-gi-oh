@@ -4,7 +4,8 @@
         <div class="my_card-counter">
             <h4>Found {{ store.cardList.length }}</h4>
         </div>
-        <CardElement />
+        <CardElement v-for="cards in store.cardList">
+        </CardElement>
     </div>
 </template>
 

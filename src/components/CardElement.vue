@@ -13,9 +13,13 @@
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
+import { store } from '../store.js';
 
 export default {
     name: 'CardElement',
+    components: {
+        store,
+    },
     data() {
         return {
         }
