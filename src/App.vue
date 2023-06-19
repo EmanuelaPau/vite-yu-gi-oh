@@ -29,7 +29,7 @@ export default {
       .then((response) => {
         // handle success
         console.log(response);
-        this.store.cardList = response.data;
+        this.store.cardList = response.data.data;
         console.log(store.cardList)
       })
       .catch(function (error) {

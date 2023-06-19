@@ -2,8 +2,7 @@
     <div class="my_card-container">
         <!-- <h2>Cards Container</h2> -->
         <div class="my_card-counter">
-            Found {{ }}
-            <h1> {{ store.searchText }}</h1>
+            <h4>Found {{ store.cardList.length }}</h4>
         </div>
         <CardElement />
     </div>
@@ -19,6 +18,7 @@ export default {
 
     components: {
         CardElement,
+        store,
     },
 
     data() {
