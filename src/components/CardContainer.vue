@@ -3,13 +3,16 @@
         <!-- <h2>Cards Container</h2> -->
         <div class="my_card-counter">
             Found 39 cards
+            <h1> {{ store.searchText }}</h1>
         </div>
         <CardElement />
     </div>
 </template>
 
 <script>
-import CardElement from './CardElement.vue'
+import CardElement from './CardElement.vue';
+import { store } from '../store.js';
+
 
 export default {
     name: 'CardContainer',
@@ -20,6 +23,7 @@ export default {
 
     data() {
         return {
+            store,
         }
     },
     methods() {
