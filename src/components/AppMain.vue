@@ -2,7 +2,7 @@
     <main>
         <!-- <h1>Main</h1> -->
         <div class="main-container">
-            <AppSearchbar />
+
 
             <CardContainer />
         </div>
@@ -12,7 +12,7 @@
 <script>
 import CardContainer from './CardContainer.vue'
 import { store } from '../store.js';
-import AppSearchbar from './AppSearchbar.vue'
+
 
 export default {
     name: 'AppMain',
@@ -20,7 +20,7 @@ export default {
     components: {
         CardContainer,
         store,
-        AppSearchbar,
+
     },
 
     data() {

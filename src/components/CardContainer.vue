@@ -1,13 +1,13 @@
 <template>
+    <AppSearchbar />
     <div class="my_cards-container">
         <div class="container p-0">
             <div class="row card-row m-0 p-0">
-
                 <div class="my_card-counter col-12">
                     <h2>Found {{ store.cardList.length }} cards</h2>
                 </div>
                 <AppLoader v-if="store.cardList.length === 0" />
-                <div @select="clickTest(archetype)">Ciao {{ scritta }}</div>
+                <div @select="clickTest">Ciao {{ scritta }}</div>
                 <CardElement class="col-lg-3 col-md-6 col-12" v-for="card in store.cardList" :cardName="card.name"
                     :cardType="card.type" :cardImage="card.card_images[0].image_url">
                 </CardElement>
@@ -20,7 +20,7 @@
 import CardElement from './CardElement.vue';
 import AppLoader from './AppLoader.vue'
 import { store } from '../store.js';
-
+import AppSearchbar from './AppSearchbar.vue'
 
 export default {
     name: 'CardContainer',
@@ -29,6 +29,7 @@ export default {
         CardElement,
         store,
         AppLoader,
+        AppSearchbar,
     },
 
     data() {
@@ -38,11 +39,11 @@ export default {
         }
     },
 
-
-
     methods: {
-        clickTest(element) {
-            scritta = element;
+        clickTest() {
+            // scritta = element;
+            console.log('scritta')
+            // return scritta;
         },
 
     },
