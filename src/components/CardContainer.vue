@@ -1,5 +1,5 @@
 <template>
-    <AppSearchbar @pippo="console.log('daiii')" />
+    <AppSearchbar @pippo="clickTest" />
     <div class="my_cards-container">
         <div class="container p-0">
             <div class="row card-row m-0 p-0">
@@ -40,9 +40,10 @@ export default {
     },
 
     methods: {
-        clickTest() {
-            // scritta = element;
-            console.log('scritta')
+        clickTest(element) {
+            this.scritta = element.archetype_name;
+            console.log(this.scritta);
+            // console.log('scritta')
             // return scritta;
         },
 
