@@ -44,7 +44,8 @@ export default {
             this.activeArchetype = element.archetype_name;
             console.log(this.activeArchetype);
 
-            axios.get(`https://db.ygoprodeck.com/api/v7/cardinfo.php/archetype=${this.activeArchetype}`)
+            axios.get(`https://db.ygoprodeck.com/api/v7/cardinfo.php/?archetype=${this.activeArchetype}`)
+                // ${this.activeArchetype}
                 .then((response) => {
                     // handle success
                     this.store.cardList = response.data.data;
