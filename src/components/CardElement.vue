@@ -42,7 +42,7 @@ img {
 }
 
 div.my_card-container {
-    width: calc(100% / 5 - 20px);
+    // width: calc(100% / 5 - 20px);
     text-align: center;
     // height: 500px;
 
