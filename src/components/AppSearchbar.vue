@@ -5,7 +5,7 @@
             Choose an archetype
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li v-for="archetype in archetypeList" @click="$emit('search')"><a class=" dropdown-item" href="#">{{
+            <li v-for="archetype in archetypeList" @click="$emit('pippo')"><a class=" dropdown-item" href="#">{{
                 archetype.archetype_name
             }}</a></li>
         </ul>
