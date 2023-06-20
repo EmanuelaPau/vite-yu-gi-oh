@@ -2,10 +2,10 @@
     <div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle my_button" type="button" id="dropdownMenuButton1"
             data-bs-toggle="dropdown" aria-expanded="false">
-            Choose the archetype
+            Choose an archetype
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li v-for="archetype in archetypeList" @click="clickTest(archetype)"><a class=" dropdown-item" href="#">{{
+            <li v-for="archetype in archetypeList" @click="$emit('select', archetype)"><a class=" dropdown-item" href="#">{{
                 archetype.archetype_name
             }}</a></li>
         </ul>
@@ -52,9 +52,6 @@ export default {
     ,
 
     methods: {
-        clickTest(element) {
-            console.log('click on ' + element.archetype_name);
-        },
     },
 }		
 </script>
