@@ -2,19 +2,7 @@
     <main>
         <!-- <h1>Main</h1> -->
         <div class="main-container">
-
-
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                    Alien
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-            </div>
+            <AppSearchbar />
 
             <CardContainer />
         </div>
@@ -24,6 +12,7 @@
 <script>
 import CardContainer from './CardContainer.vue'
 import { store } from '../store.js';
+import AppSearchbar from './AppSearchbar.vue'
 
 export default {
     name: 'AppMain',
@@ -31,6 +20,7 @@ export default {
     components: {
         CardContainer,
         store,
+        AppSearchbar,
     },
 
     data() {

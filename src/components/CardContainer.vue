@@ -2,7 +2,7 @@
     <div class="my_cards-container">
 
         <div class="my_card-counter">
-            <h2>Found 20 cards</h2>
+            <h2>Found {{ store.cardList.length }} cards</h2>
         </div>
         <AppLoader v-if="store.cardList.length === 0" />
 
@@ -35,6 +35,7 @@ export default {
         }
     },
     methods() {
+
     },
 }		
 </script>

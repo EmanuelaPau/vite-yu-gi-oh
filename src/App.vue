@@ -31,9 +31,12 @@ export default {
         console.log(response);
         this.store.cardList = response.data.data;
         console.log(store.cardList)
+        setTimeout(() => {
+          this.cardList = response.data.data;
+        }, 2000)
       })
       .catch(function (error) {
-        // handle error
+        // handle error 
         console.log(error);
       })
       .finally(function () {
