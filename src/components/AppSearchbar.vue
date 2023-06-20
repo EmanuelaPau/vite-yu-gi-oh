@@ -5,8 +5,10 @@
             Choose the archetype
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li v-for="archetype in archetypeList"><a class="dropdown-item" href="#">{{ archetype.archetype_name
-            }}</a></li>
+            <li v-for="archetype in archetypeList" @click=" console.log('click on ' + archetype.archetype_name)"><a
+                    class=" dropdown-item" href="#">{{
+                        archetype.archetype_name
+                    }}</a></li>
         </ul>
     </div>
 </template>
