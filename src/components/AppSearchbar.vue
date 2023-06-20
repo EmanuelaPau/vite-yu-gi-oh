@@ -5,7 +5,8 @@
             Choose the archetype
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li v-for="archetype in archetypeList"><a class="dropdown-item" href="#">{{ archetype.archetype_name }}</a></li>
+            <li v-for="archetype in archetypeList"><a class="dropdown-item" href="#">{{ archetype.archetype_name
+            }}</a></li>
         </ul>
     </div>
 </template>
@@ -30,11 +31,12 @@ export default {
 
     created() {
         // Make a request for a user with a given ID
-        axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php?archetype_name=20')
+        axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php')
             .then((response) => {
                 // handle success
-                console.log(response)
+                // console.log(response)
                 this.archetypeList = response.data;
+                this.archetypeList = this.archetypeList.slice(0, 8);
                 console.log(this.archetypeList);
             })
             .catch(function (error) {

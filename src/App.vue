@@ -28,9 +28,9 @@ export default {
     axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0')
       .then((response) => {
         // handle success
-        console.log(response);
+        // console.log(response);
         this.store.cardList = response.data.data;
-        console.log(store.cardList)
+        // console.log(store.cardList)
         setTimeout(() => {
           this.cardList = response.data.data;
         }, 2000)
