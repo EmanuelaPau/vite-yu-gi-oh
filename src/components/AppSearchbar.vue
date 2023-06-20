@@ -5,13 +5,14 @@
             Choose the archetype
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li v-for="archetype in store.cardList"><a class="dropdown-item" href="#">Action</a></li>
+            <li v-for="archetype in archetypeList"><a class="dropdown-item" href="#">{{ archetype.archetype_name }}</a></li>
         </ul>
     </div>
 </template>
 
 <script>
 import { store } from '../store.js';
+import axios from 'axios';
 
 export default {
     name: 'AppMain',
@@ -23,8 +24,30 @@ export default {
     data() {
         return {
             store,
+            archetypeList: [],
         }
     },
+
+    created() {
+        // Make a request for a user with a given ID
+        axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php')
+            .then((response) => {
+                // handle success
+                console.log(response)
+                this.archetypeList = response.data;
+                console.log(this.archetypeList);
+            })
+            .catch(function (error) {
+                // handle error 
+                console.log(error);
+            })
+            .finally(function () {
+                // always executed
+            });
+
+    }
+    ,
+
     methods() {
     },
 }		
