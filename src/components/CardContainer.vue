@@ -7,7 +7,7 @@
                     <h2>Found {{ store.cardList.length }} cards</h2>
                 </div>
                 <AppLoader v-if="store.cardList.length === 0" />
-                <div @select="scritta = archetype">{{ archetype }}</div>
+                <div @select="clickTest(archetype)">Ciao {{ scritta }}</div>
                 <CardElement class="col-lg-3 col-md-6 col-12" v-for="card in store.cardList" :cardName="card.name"
                     :cardType="card.type" :cardImage="card.card_images[0].image_url">
                 </CardElement>
@@ -34,7 +34,7 @@ export default {
     data() {
         return {
             store,
-            scritta: '',
+            scritta: 'boh',
         }
     },
 
@@ -42,8 +42,9 @@ export default {
 
     methods: {
         clickTest(element) {
-            console.log('click on ' + element.archetype_name);
+            scritta = element;
         },
+
     },
 }		
 </script>
