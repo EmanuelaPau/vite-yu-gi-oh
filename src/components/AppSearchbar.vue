@@ -35,8 +35,6 @@ export default {
         // Make a request for a user with a given ID
         axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php')
             .then((response) => {
-                // handle success
-                // console.log(response)
                 this.archetypeList = response.data;
                 this.archetypeList = this.archetypeList.slice(0, 8);
                 console.log(this.archetypeList);
