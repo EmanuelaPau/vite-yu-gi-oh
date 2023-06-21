@@ -1,5 +1,5 @@
 <template>
-    <div class="dropdown">
+    <!-- <div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle my_button" type="button" id="dropdownMenuButton1"
             data-bs-toggle="dropdown" aria-expanded="false">
             Choose an archetype
@@ -10,7 +10,13 @@
                         archetype.archetype_name
                     }}</a></li>
         </ul>
-    </div>
+    </div> -->
+
+    <select class="form-select" aria-label="Default select example">
+        <option selected>Choose an archetype</option>
+        <option v-for="archetype in archetypeList" @click="$emit('mySelect', archetype)" value="archetype.archetype_name">{{
+            archetype.archetype_name }}</option>
+    </select>
 </template>
 
 <script>
@@ -65,6 +71,12 @@ button.my_button {
 }
 
 div.dropdown {
+    margin-bottom: 30px;
+}
+
+select {
+    width: 200px;
+    font-size: .95rem;
     margin-bottom: 30px;
 }
 </style> 
